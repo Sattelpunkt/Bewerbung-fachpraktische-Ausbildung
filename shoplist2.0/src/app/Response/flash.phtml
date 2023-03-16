@@ -1,0 +1,9 @@
+<div class="alert alert-<?= $key ?> alert-dismissible fade show flash" id="flash" role="alert">
+    <strong><?= $value ?></strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<script>
+    setTimeout(function(){
+        document.getElementById('flash-container').style.display = 'none';
+    }, 5000);
+</script>

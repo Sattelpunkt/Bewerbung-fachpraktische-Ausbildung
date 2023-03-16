@@ -1,0 +1,198 @@
+<?php $navigationInformation = $this->__get('navigationInformation'); ?>
+
+<div class="container-fluid overflow-hidden">
+    <div class="row vh-100 overflow-auto">
+        <div class="sidebar p-2" style="width: 240px;">
+            <div class="sidebar-header">
+                <span class="fs-3">Shoplist 2.0</span>
+            </div>
+            <div class="sitebar-header-small">
+                <span class="fs-5">Einkaufszettel</i></span>
+            </div>
+            <ul class="nav nav-pills flex-column mb-auto navigation">
+                <li class="nav-item">
+                    <a href="https://<?= URL ?>" class="nav-link text-white active">
+
+                        <i class="fa fa-home" aria-hidden="true"></i>&nbsp; &nbsp;Übersicht
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="https://<?= URL ?>article/new" class="nav-link text-white">
+                        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp; &nbsp;Neu
+                    </a>
+                </li>
+                <li class="mb-1">
+                    <a href="#" class="nav-link text-white" data-bs-toggle="collapse"
+                       data-bs-target="#dashboard-collapse1" aria-expanded="false">
+                        <i class="fa fa-book" aria-hidden="true"></i>&nbsp; &nbsp;Kategorien&nbsp; &nbsp;<i
+                                class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+
+                    <?php foreach ($navigationInformation['cat'] as $cat ) { ?>
+                    <!-- Kategorie Block -->
+                    <div class="collapse" id="dashboard-collapse1">
+                        <ul class="nav nav-pills flex-column mb-auto navigation">
+                            <li><a href="https://<?= URL ?>cat/detail/:<?= $cat['id'] ?>" class="nav-link text-white childlist"><i
+                                            class="fa fa-book"
+                                            aria-hidden="true"></i>&nbsp;
+                                    &nbsp;<?= $cat['name'] ?></a></li>
+
+                        </ul>
+                    </div>
+                    <!-- Kategorie Block Ende -->
+                    <?php } ?>
+                </li>
+
+
+                <li class="mb-1">
+                    <a href="#" class="nav-link text-white" data-bs-toggle="collapse"
+                       data-bs-target="#dashboard-collapse2" aria-expanded="false">
+                        <i class="fas fa-store" aria-hidden="true"></i>&nbsp; &nbsp;Shops&nbsp; &nbsp;<i
+                                class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+
+                    <?php foreach ($navigationInformation['shop'] as $shop ) { ?>
+                    <!-- Kategorie Block -->
+                    <div class="collapse" id="dashboard-collapse2">
+                        <ul class="nav nav-pills flex-column mb-auto navigation">
+                            <li><a href="https://<?= URL ?>shop/detail/<?= $shop['id'] ?>" class="nav-link text-white childlist"><i
+                                            class="fas fa-store"
+                                            aria-hidden="true"></i>&nbsp;
+                                    &nbsp;<?= $shop['name'] ?></a></li>
+
+                        </ul>
+                    </div>
+                    <!-- Kategorie Block Ende -->
+                    <?php } ?>
+
+                </li>
+                <li class="nav-item">
+                    <a href="https://<?= URL ?>home" class="nav-link text-white">
+
+                        <i class="fas fa-shopping-cart" aria-hidden="true"></i>&nbsp; &nbsp;Gekauft
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white">
+                        <i class="fas fa-archive" aria-hidden="true"></i>&nbsp; &nbsp;Archiv
+                    </a>
+                </li>
+
+                <li class="mb-1">
+                    <a href="#" class="nav-link text-white" data-bs-toggle="collapse"
+                       data-bs-target="#dashboard-collapse3" aria-expanded="false">
+                        <i class="fa fa-cog" aria-hidden="true"></i>&nbsp; &nbsp;Einstellungen&nbsp; &nbsp;<i
+                                class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="dashboard-collapse3">
+                        <ul class="nav nav-pills flex-column mb-auto navigation">
+                            <li><a href="https://<?= URL ?>cat/settings" class="nav-link text-white childlist"><i
+                                            class="fa fa-cog"
+                                            aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Kategorien</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="collapse" id="dashboard-collapse3">
+                        <ul class="nav nav-pills flex-column mb-auto navigation">
+                            <li><a href="https://<?= URL ?>shop/settings" class="nav-link text-white childlist"><i
+                                            class="fa fa-cog"
+                                            aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Shops</a></li>
+
+                        </ul>
+
+
+                    </div>
+                    <div class="collapse" id="dashboard-collapse3">
+                        <ul class="nav nav-pills flex-column mb-auto navigation">
+                            <li><a href="https://<?= URL ?>bundle/settings" class="nav-link text-white childlist"><i
+                                            class="fa fa-cog"
+                                            aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Gebinde</a></li>
+
+                        </ul>
+
+
+                    </div>
+                </li>
+
+
+                <div class="sitebar-header-small">
+                    <span class="fs-5">Truhe</span>
+                </div>
+
+                <li class="nav-item">
+                    <a href="https://<?= URL ?>home" class="nav-link text-white active">
+
+                        <i class="fa fa-home" aria-hidden="true"></i>&nbsp; &nbsp;Übersicht
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white">
+                        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp; &nbsp;Neu
+                    </a>
+                </li>
+                <li class="mb-1">
+                    <a href="#" class="nav-link text-white" data-bs-toggle="collapse"
+                       data-bs-target="#dashboard-collapse4" aria-expanded="false">
+                        <i class="fa fa-book" aria-hidden="true"></i>&nbsp; &nbsp;Kategorien&nbsp; &nbsp;<i
+                                class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="dashboard-collapse4">
+                        <ul class="nav nav-pills flex-column mb-auto navigation">
+                            <li><a href="https://<?= URL ?>genre/settings" class="nav-link text-white childlist"><i
+                                            class="fa fa-cog"
+                                            aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Test Kategorien</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="collapse" id="dashboard-collapse4">
+                        <ul class="nav nav-pills flex-column mb-auto navigation">
+                            <li><a href="https://<?= URL ?>genre/settings" class="nav-link text-white childlist"><i
+                                            class="fa fa-cog"
+                                            aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Test Kategorien 2</a></li>
+
+                        </ul>
+
+
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white">
+                        <i class="fas fa-archive" aria-hidden="true"></i>&nbsp; &nbsp;Archiv
+                    </a>
+                </li>
+                <li class="mb-1">
+                    <a href="#" class="nav-link text-white" data-bs-toggle="collapse"
+                       data-bs-target="#dashboard-collapse5" aria-expanded="false">
+                        <i class="fa fa-cog" aria-hidden="true"></i>&nbsp; &nbsp;Einstellungen&nbsp; &nbsp;<i
+                                class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse" id="dashboard-collapse5">
+                        <ul class="nav nav-pills flex-column mb-auto navigation">
+                            <li><a href="https://<?= URL ?>genre/settings" class="nav-link text-white childlist"><i
+                                            class="fa fa-cog"
+                                            aria-hidden="true"></i>&nbsp;
+                                    &nbsp;Kategorien</a></li>
+
+                        </ul>
+                    </div>
+
+
+                </li>
+
+            </ul>
+
+
+            <br/><br/><br/>
+            <?php
+            //$this->displayMSG();
+            ?>
+
+        </div>

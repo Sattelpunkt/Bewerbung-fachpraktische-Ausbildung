@@ -1,0 +1,70 @@
+<?php
+$this->renderPart('Header');
+$this->renderPart('Navigation');
+$dropdown = $this->__get('dropdown');
+?>
+    <div class="col d-flex flex-column h-sm-100">
+        <div class="content">
+
+            <div class="col-12 box">
+                <div class="boxheader">Neue Artikel anlegen</div>
+                <div class="boxbody">
+
+                    <?php for ($i = 0; $i <= 5; $i++) { ?>
+                    <form class="row g-3" method="post" action="https://<?= URL ?>article/new">
+
+                        <div class="col-md-1">
+                            <label for="inputAnzahl" class="form-label">Anzahl</label>
+                            <input type="text" class="form-control" id="inputAnzahl" name="anzahl[]">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputGebinde" class="form-label">Gebinde</label>
+                            <select id="inputGebinde" class="form-select" name="bundle[]">
+                                <?php foreach ($dropdown['bundle'] as $bundle) { ?>
+                                    <option value="<?= $bundle->getID() ?>>"><?= $bundle->getName() ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" name="name[]">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputCat" class="form-label">Kategorie</label>
+                            <select id="inputCat" class="form-select" name="cat[]">
+                                <?php foreach ($dropdown['cat'] as $cat) { ?>
+                                <option value="<?= $cat->getID() ?>"><?= $cat->getName() ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="inputShop" class="form-label">Shop</label>
+                            <select id="inputShop" class="form-select" name="shop[]">
+                                <?php foreach ($dropdown['shop'] as $shop) { ?>
+                                    <option value="<?= $shop->getID() ?>"><?= $shop->getName() ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                        <hr/>
+                        <?php } ?>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary graybutton">Anlegen</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="boxfooter"></div>
+            </div>
+            <?php
+            $this->displayMSG();
+            ?>
+
+
+        </div>
+
+    </div>
+
+    </div>
+
+<?php
+$this->renderPart('Footer');

@@ -1,0 +1,178 @@
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    background-color: #454D55;
+    padding: 0px;
+    margin: 0px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.sidebar-header {
+    text-align: center;
+    color: white;
+}
+
+.sitebar-header-small {
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+}
+
+.nav-link.active {
+    background-color: #606060 !important;
+}
+
+.sidebar {
+    background-color: #343A40;
+    border-right: 1px solid #606060;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
+
+}
+
+.navigation a:hover {
+    background-color: #606060;
+}
+
+
+.navigation li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    font-size: 15px;
+
+}
+.navigation li:last-child {
+    border: none;
+}
+
+.sitebar-bottom {
+    background-color: #343A40;
+    border-top: 1px solid #606060;
+    color: gray;
+    font-size: smaller;
+    position: relative;
+    width: 90%;
+
+}
+
+
+.content {
+    margin: 10px;
+    padding: 10px;
+}
+
+.childlist {
+    padding-left: 30px;
+    font-size: 13px;
+}
+
+
+.navdown {
+    position: fixed;
+    bottom: 10px;
+}
+
+.box {
+    background-color: #343A40;
+    min-height: 20vh;
+    margin-bottom: 30px;
+    border: 2px solid #606060;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
+
+}
+
+.boxheader {
+    background-color: #343A40;
+    height: 30px;
+    border-bottom: 1px solid #606060;
+    text-align: center;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.boxfooter {
+    background-color: #343A40;
+    height: 20px;
+    width: 100%;
+    border-top: 1px solid #606060;
+    text-align: right;
+    color: gray;
+    font-size: smaller;
+    position: absolute;
+    bottom: 0;
+}
+
+.boxbody {
+    background-color: #343A40;
+    min-height: 30px;
+    width: 100%;
+    color: white;
+    padding: 30px;
+}
+
+.boxklein {
+    background-color: #343A40;
+    min-height: 20vh;
+    margin-bottom: 30px;
+    border: 2px solid #606060;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: relative;
+    width: 50%;
+    left: 25%;
+}
+
+.table_main {
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0px 5px;
+    font-size: 14px;
+    color: white;
+    width: 100%;
+
+}
+
+
+thead {
+    font-size: 16px;
+}
+
+tr {
+    background-color: #454D55;
+}
+
+.graybutton {
+    background-color: #606060;
+    border: none;
+}
+
+.alert {
+    font-size: 12px;
+}
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+.bluebutton {
+    background-color: #454D55;
+    border: none;
+}

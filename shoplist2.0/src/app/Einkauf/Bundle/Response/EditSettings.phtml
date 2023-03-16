@@ -1,0 +1,41 @@
+<?php
+$bundle = $this->__get('bundle');
+$this->renderPart('Header');
+$this->renderPart('Navigation');
+?>
+    <div class="col d-flex flex-column h-sm-100">
+        <div class="content">
+
+            <div class="col-12 box">
+                <div class="boxheader">Gebinde bearbeiten</div>
+                <div class="boxbody">
+
+
+                    <form class="row g-3" action="https://<?= URL ?>bundle/settings/edit/<?= $bundle[0]->getId() ?>" method="POST">
+
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">Name der Kategorie</label>
+                            <input type="text" class="form-control" id="inputCity" name="bundle" value="<?= $bundle[0]->getName() ?>">
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary graybutton">Bearbeiten</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="boxfooter"></div>
+            </div>
+            <?php
+            $this->displayMSG();
+            ?>
+
+
+        </div>
+
+    </div>
+
+    </div>
+
+<?php
+$this->renderPart('Footer');

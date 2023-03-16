@@ -1,0 +1,68 @@
+<?php
+$this->renderPart('Header');
+$this->renderPart('Navigation');
+?>
+    <div class="col d-flex flex-column h-sm-100">
+        <div class="content">
+            <div class="col-12 box">
+                <div class="boxheader">Alle Artikel</div>
+                <div class="boxbody">
+
+                    <table class="table table-borderless table_main">
+                        <thead>
+                        <tr>
+                            <th scope="col">Anzahl</th>
+                            <th scope="col">Gebinde</th>
+                            <th scope="col">Artikel</th>
+                            <th scope="col">Kategorie</th>
+                            <th scope="col">Shop</th>
+                            <th scope="col">Aktion</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($this->__get('article') as $article) { ?>
+                            <tr>
+                                <th scope="row"><?= $article->getAnzahl() ?></th>
+                            <td>
+                                <?= $article->getBundle() ?>
+                            </td>
+                                <td>
+                                    <?= $article->getName() ?>
+                                </td>
+                                <td>
+                                    <?= $article->getCat() ?>
+                                </td>
+                                <td>
+                                    <?= $article->getShop() ?>
+                                </td>
+                                <td>
+
+                                        <a href="https://<?= URL ?>article/edit/<?= $article->getId() ?>"><i
+                                                class="fas fa-pen"
+                                                aria-hidden="true"></i></a>&nbsp; &nbsp;&nbsp; &nbsp;
+                                </td>
+                            </tr>
+                        <?php } ?>
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <div class="boxfooter"></div>
+            </div>
+            <?php
+            $this->displayMSG();
+            ?>
+
+
+
+
+        </div>
+
+    </div>
+
+    </div>
+
+<?php
+$this->renderPart('Footer');
